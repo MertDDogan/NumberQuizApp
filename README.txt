@@ -1,84 +1,65 @@
-# 🧠 NumberQuizApp - Java GUI Number Quiz
+# NumberQuizApp – Java GUI Number Quiz
 
-A simple but powerful number quiz game built using Java Swing.  
-Users are shown a random number (1–20) and must type its English name (e.g., `four`, `twelve`). The app checks answers, tracks performance, and provides a fun, interactive interface.
-
----
-
-## ✨ Features
-
-- ✅ 20 unique questions (each number shown once)
-- 🔁 Skip, Retry, and Quit options
-- 🔡 Case-insensitive answer checking
-- 📊 Live score tracking (Total, Correct, Wrong, Skipped)
-- 🖼️ Visual tick/cross images
-- 📈 Bar chart-style stats indicator
-- 💾 Loads numbers from external file (`numbers.txt`)
-- 🎨 Clean dark-themed GUI layout
+A Java Swing-based graphical application where users are challenged to identify the English names of randomly selected numbers between 1 and 20. This application features real-time validation, user input tracking, and form transitions to ensure a smooth and interactive experience.
 
 ---
 
-## 🚀 How It Works
+## Features
 
-1. A random number appears on screen.
-2. User types the English word for the number.
-3. If correct ➜ ✅ "Correct!" form appears with tick.
-4. If wrong ➜ ❌ "Wrong!" form appears with cross.
-5. Retry generates new/same question depending on correctness.
-6. Game ends after 20 total questions. Final stats shown.
-
----
-
-## 🧪 Example Screenshots
-
-| Input Form                     | Output (Correct/Wrong)          |
-|-------------------------------|---------------------------------|
-| `Enter the name of the number: 4` | ✅ **Correct** or ❌ **Wrong Answer** |
-| Total: 2 | Correct: 1 | Wrong: 1 |
-| Final Stats: `Correct: 14, Wrong: 3, Skipped: 3` |
+- Handles 20 unique random questions
+- Displays one number at a time
+- Accepts answers through a JTextField input
+- Case-insensitive input validation
+- Retry, Skip, and Quit functionality
+- Real-time score tracking (Total, Correct, Wrong, Skipped)
+- Clean layout and user-friendly navigation
+- Reads question data from external file
+- Visual feedback using tick/cross images
 
 ---
 
-## 🛠 Technologies Used
+## How It Works
 
-- **Java Swing** (UI)
-- **File I/O** (`BufferedReader`, `FileReader`)
-- **Event Handling** (`ActionListener`)
-- **OOP Principles** (Encapsulation, Classes, Constructors)
-- **Exception Handling** (Robustness)
-
----
-
-## 🧠 Key Learning Highlights
-
-- Java GUI component design (buttons, labels, text fields)
-- Reading and using external resource files
-- Managing form transitions between multiple screens
-- Validating user input (case-insensitive checks)
-- Visual user feedback through images and layout
-- Debugging, test case coverage, and UI logic flow
+1. The `Main` class launches the `InputForm` window.
+2. A random number (1–20) is shown.
+3. The user types the English word corresponding to the number.
+4. The app validates the answer:
+   - If correct, the user proceeds to the next question.
+   - If incorrect, the same question is asked again.
+5. User may also choose to skip the question.
+6. After 20 total questions (correct, skipped, and wrong), final statistics are shown with an option to restart or exit.
 
 ---
 
-## 📖 Project Purpose
+## Technologies Used
 
-This application was originally developed as part of the **FUPR POF2 Spring 2025 GUI Programming Assessment** at university.
-
-- 📚 **Assessment Weight**: 30%
-- 🧑‍💻 **Role**: Full development (planning, UI, backend, testing)
-- 📂 **Structure**: Includes `InputForm`, `OutputForm`, `Main`, resource files, and full logic
-
-Now, it is refined and presented as a **personal portfolio project** for GitHub.
+- Java Swing (GUI components)
+- Java I/O (FileReader, BufferedReader)
+- Object-Oriented Programming
+- ActionListener (event handling)
+- Conditional logic and input validation
 
 ---
 
-## 🔗 Run the App
+## Folder & File Structure
 
-### Requirements:
+- `src/` – All Java classes: `InputForm.java`, `OutputForm.java`, `Main.java`
+- `resources/` – Includes:
+  - `numbers.txt` – list of numbers (1–20) in word form
+  - `tick.png` – correct answer icon
+  - `cross.png` – incorrect answer icon
+
+All paths are handled **relatively** to ensure cross-platform compatibility.
+
+---
+
+## How to Run
+
+### Requirements
 - Java 8 or higher
-- Any Java IDE (e.g., IntelliJ, Eclipse)
+- IDE such as IntelliJ or Eclipse
 
-### Instructions:
+### Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/MertDDogan/NumberQuizApp.git
